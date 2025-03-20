@@ -10,7 +10,7 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: testdb
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./docker/init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -20,7 +20,7 @@ services:
     container_name: node_app
     restart: always
     environment:
-      DATABASE_URL: postgresql://user:password@postgres:5432/testdb
+      DATABASE_URL: postgresql://user:password@postgres:5434/testdb
       PORT: 5000
     ports:
       - "5000:5000"
