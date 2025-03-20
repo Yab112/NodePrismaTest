@@ -19,6 +19,7 @@ jobs:
           POSTGRES_USER: user
           POSTGRES_PASSWORD: password
           POSTGRES_DB: testdb
+          DATABASE_URL: postgres://user:password@localhost:5432/testdb  # Add this line
         ports:
           - 5432:5432
 
